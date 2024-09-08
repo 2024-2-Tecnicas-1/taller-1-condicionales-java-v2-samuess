@@ -9,8 +9,17 @@ import java.util.Scanner;
  */
 public class Triangulo {
     public static String evaluar(double a, double b, double c) {
-        // TODO: Coloca aquí el código del ejercicio 7: Triángulos
-        return "";
+        String respuesta = "";
+        if (a == b && b == c){
+            respuesta = "equilátero";
+        }else if ((a + b > c) && (a + c > b) && (b + c > a)){
+            respuesta = "No es un triángulo válido";
+        }else if (a == b || b == c || a == c){
+            respuesta = "isósceles";
+        }else{
+            respuesta = "escaleno";
+        }
+        return respuesta;
     }
     
     public static void main(String[] args) {

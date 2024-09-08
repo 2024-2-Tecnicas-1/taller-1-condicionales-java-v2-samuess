@@ -2,16 +2,20 @@
 package ejercicios;
 
 import static ejercicios.SetDeTenis.evaluar;
+
+import java.util.Arrays;
 import java.util.Scanner;
 
-/**
- *
- * @author danielsanchez
- */
 public class Ordenamiento {
     public static String evaluar(int numero1, int numero2, int numero3, int numero4) {
-        // TODO: Coloca aquí el código del ejercicio 5: Ordenamiento
-        return "";
+        int[] numeros = {numero1, numero2, numero3, numero4};
+        Arrays.sort(numeros);
+        String respuesta = "";
+        for (int numero : numeros) {
+            respuesta += numero + " ";
+        }
+
+        return respuesta.trim();
     }
     
     public static void main(String[] args) {

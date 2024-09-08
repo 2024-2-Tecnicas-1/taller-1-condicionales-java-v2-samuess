@@ -7,12 +7,13 @@ import java.util.Scanner;
 
 public class AnnosBisiestos {
     public static String evaluar(int anno){
+        String respuesta = "";
         if ((anno % 4 == 0 && anno % 100 !=0) || (anno % 400 == 0)) {
-            System.out.println(anno + " es bisiesto");
+            respuesta = anno + " es bisiesto";
         }else{
-            System.out.println(anno + " no es bisiesto");
+            respuesta = anno + " no es bisiesto";
         }
-        return "";
+        return respuesta;
     }
     
     public static void main(String[] args) {
