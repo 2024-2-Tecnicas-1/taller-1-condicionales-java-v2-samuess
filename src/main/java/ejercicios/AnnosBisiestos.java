@@ -4,13 +4,14 @@ package ejercicios;
 import static ejercicios.SetDeTenis.evaluar;
 import java.util.Scanner;
 
-/**
- *
- * @author danielsanchez
- */
+
 public class AnnosBisiestos {
     public static String evaluar(int anno){
-        // TODO: Coloca aquí el código del ejercicio 2: Años bisiestos
+        if ((anno % 4 == 0 && anno % 100 !=0) || (anno % 400 == 0)) {
+            System.out.println(anno + " es bisiesto");
+        }else{
+            System.out.println(anno + " no es bisiesto");
+        }
         return "";
     }
     
