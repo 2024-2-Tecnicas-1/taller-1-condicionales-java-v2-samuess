@@ -3,21 +3,19 @@ package ejercicios;
 import static ejercicios.SetDeTenis.evaluar;
 import java.util.Scanner;
 
-/**
- *
- * @author danielsanchez
- */
 public class Triangulo {
     public static String evaluar(double a, double b, double c) {
         String respuesta = "";
-        if (a == b && b == c){
-            respuesta = "equilátero";
-        }else if ((a + b > c) && (a + c > b) && (b + c > a)){
+        if ((a + b > c) && (a + c > b) && (b + c > a)) {
+            if (a == b && b == c) {
+                respuesta = "El triángulo es equilátero";
+            }else if (a == b || b == c || a == c) {
+                respuesta = "El triángulo es isósceles";
+            }else {
+                respuesta = "El triángulo es escaleno";
+            }
+        }else {
             respuesta = "No es un triángulo válido";
-        }else if (a == b || b == c || a == c){
-            respuesta = "isósceles";
-        }else{
-            respuesta = "escaleno";
         }
         return respuesta;
     }
