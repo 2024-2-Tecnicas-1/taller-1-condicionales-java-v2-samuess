@@ -1,14 +1,23 @@
 package ejercicios;
 
 import java.util.Scanner;
-
-/**
- *
- * @author danielsanchez
- */
 public class SetDeTenis {
     public static String evaluar(int numVictoriasA, int numVictoriasB) {
-        // TODO: Coloca aquí el código del ejercicio 1: Set de tenis
+        if (numVictoriasA == 7 && (numVictoriasB == 5 || numVictoriasB == 6)) {
+            System.out.println("Ganó A");
+        }else if (numVictoriasB == 7 && (numVictoriasA == 5 || numVictoriasA == 6)){
+            System.out.println("Ganó B");
+        }else if (numVictoriasA == 6 && numVictoriasB <= 4){
+            System.out.println("Ganó A");
+        }else if (numVictoriasB == 6 && numVictoriasA <= 4){
+            System.out.println("Ganó B");
+        }else if (numVictoriasA <= 6 && numVictoriasB <= 6){
+            System.out.println("Aún no termina");
+        }else if (numVictoriasA > 7 || numVictoriasB > 7 || (numVictoriasA == 7 && numVictoriasB < 5) || (numVictoriasB == 7 && numVictoriasA < 5)){
+            System.out.println("Inválido");
+        }else {
+            System.out.println("Inválido");
+        }
         return "";
     }
     
